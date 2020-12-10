@@ -1,0 +1,85 @@
+argon2-cffi @ file:///C:/ci/argon2-cffi_1596828549974/work
+async-generator==1.10
+attrs @ file:///tmp/build/80754af9/attrs_1604765588209/work
+backcall==0.2.0
+bleach @ file:///tmp/build/80754af9/bleach_1600439572647/work
+certifi==2020.12.5
+cffi @ file:///C:/ci/cffi_1606255207413/work
+colorama @ file:///tmp/build/80754af9/colorama_1603211150991/work
+cycler==0.10.0
+decorator==4.4.2
+defusedxml==0.6.0
+entrypoints==0.3
+et-xmlfile==1.0.1
+importlib-metadata @ file:///tmp/build/80754af9/importlib-metadata_1602276842396/work
+ipykernel @ file:///C:/ci/ipykernel_1596208728219/work/dist/ipykernel-5.3.4-py3-none-any.whl
+ipython @ file:///C:/ci/ipython_1604101327119/work
+ipython-genutils @ file:///tmp/build/80754af9/ipython_genutils_1606773439826/work
+ipywidgets @ file:///tmp/build/80754af9/ipywidgets_1601490159889/work
+jdcal==1.4.1
+jedi @ file:///C:/ci/jedi_1596472767194/work
+Jinja2==2.11.2
+joblib @ file:///tmp/build/80754af9/joblib_1601912903842/work
+jsonschema @ file:///tmp/build/80754af9/jsonschema_1602607155483/work
+jupyter==1.0.0
+jupyter-client @ file:///tmp/build/80754af9/jupyter_client_1601311786391/work
+jupyter-console @ file:///tmp/build/80754af9/jupyter_console_1598884538475/work
+jupyter-contrib-core==0.3.3
+jupyter-contrib-nbextensions @ file:///D:/bld/jupyter_contrib_nbextensions_1602805699967/work
+jupyter-core @ file:///C:/ci/jupyter_core_1606130908768/work
+jupyter-highlight-selected-word @ file:///D:/bld/jupyter_highlight_selected_word_1603234393058/work
+jupyter-latex-envs @ file:///D:/bld/jupyter_latex_envs_1602788998110/work
+jupyter-nbextensions-configurator @ file:///D:/bld/jupyter_nbextensions_configurator_1602769735488/work
+jupyterlab-pygments @ file:///tmp/build/80754af9/jupyterlab_pygments_1601490720602/work
+kiwisolver @ file:///C:/ci/kiwisolver_1603996595157/work
+lxml @ file:///D:/bld/lxml_1606483899145/work
+MarkupSafe @ file:///C:/ci/markupsafe_1594405949945/work
+matplotlib @ file:///C:/ci/matplotlib-base_1603356257853/work
+mistune @ file:///C:/ci/mistune_1594373272338/work
+mkl-fft==1.2.0
+mkl-random==1.1.1
+mkl-service==2.3.0
+nbclient @ file:///tmp/build/80754af9/nbclient_1602783176460/work
+nbconvert @ file:///C:/ci/nbconvert_1601914921407/work
+nbformat @ file:///tmp/build/80754af9/nbformat_1602783287752/work
+nest-asyncio @ file:///tmp/build/80754af9/nest-asyncio_1606153767164/work
+notebook @ file:///C:/ci/notebook_1601494955742/work
+numpy @ file:///C:/ci/numpy_and_numpy_base_1603468620949/work
+olefile==0.46
+openpyxl @ file:///tmp/build/80754af9/openpyxl_1598113097404/work
+packaging==20.4
+pandas @ file:///C:/ci/pandas_1602088205210/work
+pandocfilters @ file:///C:/ci/pandocfilters_1605102427207/work
+parso==0.7.0
+pickleshare @ file:///C:/ci/pickleshare_1594374056827/work
+Pillow @ file:///C:/ci/pillow_1603821929285/work
+prometheus-client @ file:///tmp/build/80754af9/prometheus_client_1606344362066/work
+prompt-toolkit @ file:///tmp/build/80754af9/prompt-toolkit_1602688806899/work
+pycparser @ file:///tmp/build/80754af9/pycparser_1594388511720/work
+Pygments @ file:///tmp/build/80754af9/pygments_1604103097372/work
+pyparsing==2.4.7
+pyrsistent @ file:///C:/ci/pyrsistent_1600123688363/work
+python-dateutil==2.8.1
+pytz @ file:///tmp/build/80754af9/pytz_1606604771399/work
+pywin32==227
+pywinpty==0.5.7
+PyYAML==5.3.1
+pyzmq==20.0.0
+qtconsole @ file:///tmp/build/80754af9/qtconsole_1600870028330/work
+QtPy==1.9.0
+scikit-learn @ file:///C:/ci/scikit-learn_1598376983131/work
+scipy @ file:///C:/ci/scipy_1597686737426/work
+seaborn @ file:///tmp/build/80754af9/seaborn_1600553570093/work
+Send2Trash==1.5.0
+six @ file:///C:/ci/six_1605205426665/work
+terminado==0.9.1
+testpath==0.4.4
+threadpoolctl @ file:///tmp/tmp9twdgx9k/threadpoolctl-2.1.0-py3-none-any.whl
+tornado==6.0.4
+traitlets @ file:///tmp/build/80754af9/traitlets_1602787416690/work
+wcwidth @ file:///tmp/build/80754af9/wcwidth_1593447189090/work
+webencodings==0.5.1
+widgetsnbextension==3.5.1
+wincertstore==0.2
+xlrd==1.2.0
+zipp @ file:///tmp/build/80754af9/zipp_1604001098328/work
