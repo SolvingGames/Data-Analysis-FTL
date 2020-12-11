@@ -209,9 +209,9 @@ def aggregate_data(FILE):
 
     # scrap earned
     temp = 0
-    for idx, val in df["SCRAP"].iteritems():
+    for idx, val in df["TOTAL SCRAP COLLECTED"].iteritems():
         df.loc[idx,"SCRAP EARNED"] = val - temp
-        temp = df.loc[idx,"SCRAP"]
+        temp = df.loc[idx,"TOTAL SCRAP COLLECTED"]
 
     scrap_earned_total = int(df.loc[df["SCRAP EARNED"] > 0, "SCRAP EARNED"].sum())
     scrap_earned_med = int(df.loc[df["SCRAP EARNED"] > 0, "SCRAP EARNED"].median())
