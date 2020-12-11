@@ -16,6 +16,7 @@ import warnings
 warnings.simplefilter("ignore", category=RuntimeWarning)
 # determine runtime
 import timeit
+import time
 
 def aggregate_data(FILE):
 
@@ -101,7 +102,7 @@ def aggregate_data(FILE):
 
     if str(augments) == "[nan]" or str(augments) == "nan" or not augments:
         ## list is empty
-        print("Ship had no augments installed when finishing the run.")
+        print("--> Ship had no augments installed when finishing the run.")
         augment1 = ""
         augment2 = ""
         augment3 = ""
@@ -116,10 +117,7 @@ def aggregate_data(FILE):
         
 
         while idx < df["BEACON"].iloc[-1]-1:
-            try:
-                val = df.loc[idx,"AUGMENTS"]
-            except:
-                pass
+            val = df.loc[idx,"AUGMENTS"]
             idx += 1
             if str(val) == "nan":
                 break
@@ -132,16 +130,12 @@ def aggregate_data(FILE):
                 idx=0
             else:
                 ## val has to be a list of 2-3 augments
-                try:
-                    val = val.split(",")
-                except:
-                    pass
+                val = val.split(",")
                 for v in val:
                     if v in augments:
                         augments.remove(v)
                         augments_beacon.append(idx)
                         augments_sorted.append(v)
-                        #print(print("FOUND, idx: {}, val: {}, v: {}".format(idx, val, v)))
                         idx=0
                         break
         ## end of loop
@@ -1770,29 +1764,19 @@ def aggregate_data(FILE):
     # append data in excel
 
     # create new row
-    row = pd.DataFrame.from_dict(dict)
+    return pd.DataFrame.from_dict(dict)
 
     # read in aggregations and add new row
-    data = pd.read_excel('analysis.xlsx')
-    data = data.append(row)
-    data = data.drop_duplicates()
+    
+    
+    #data = data.drop_duplicates()
 
     # saving aggregation with excel writer
     # needed to not overwrite existing sheets and build report
 
-    FILE = str(pathlib.Path().absolute()) + r"\analysis.xlsx"
+    #FILE = str(pathlib.Path().absolute()) + 
 
-    with pd.ExcelWriter(FILE, engine = "openpyxl",  mode='a', float_format="%.1f") as writer:
-        workBook = writer.book
-        try:
-            workBook.remove(workBook['aggregation'])
-        except:
-            print("worksheet doesn't exist")
-        finally:
-            data.to_excel(writer, sheet_name='aggregation', index = False)
-        writer.save()
-        writer.close()
-
+    
 
 
 if __name__ == "__main__":
@@ -1801,11 +1785,31 @@ if __name__ == "__main__":
 
     PATH = str(pathlib.Path().absolute()) + "\Data\\"
     
+    aggregation = pd.read_excel('analysis.xlsx')
+    
     for FILE in os.listdir(PATH):
         
         print("working - {}".format(FILE))
-        aggregate_data(FILE)
-        print("done - {}".format(FILE))
+        try:
+            aggregation = aggregation.append(aggregate_data(FILE))
+        except:
+            print("--> ERROR encountered, skipping file.")
+        
+    with pd.ExcelWriter(
+        str(pathlib.Path().absolute()) + r"\analysis.xlsx",
+        engine = "openpyxl", 
+        mode='a',
+        float_format="%.1f"
+    ) as writer:
+        workBook = writer.book
+        try:
+            workBook.remove(workBook['aggregation'])
+        except:
+            print("worksheet doesn't exist")
+        finally:
+            aggregation.to_excel(writer, sheet_name='aggregation', index = False)
+        writer.save()
+        writer.close()
         
     stop = timeit.default_timer()
-    print("Runtime: {:.2f} s".format(stop - start))
+    print("Runtime: {:.2f} seconds".format(stop - start))
