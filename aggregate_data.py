@@ -1794,6 +1794,8 @@ if __name__ == "__main__":
             aggregation = aggregation.append(aggregate_data(FILE))
         except:
             print("--> ERROR encountered, skipping file.")
+    
+    aggregation = aggregation.drop_duplicates()
         
     with pd.ExcelWriter(
         str(pathlib.Path().absolute()) + r"\analysis.xlsx",
