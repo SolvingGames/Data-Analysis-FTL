@@ -19,5 +19,5 @@ After that is done, feel free to download this repo and install the rest of the 
 ## How To Use
 
 All runs need to saved with FTLAV into /Data/ in order to be aggregated by aggregate.py into analysis.xlsx.
-After that, feel free to run all cells in create_report.ipynb in order to refresh the analysis with the newest data. 
-The last row in the sheet called "aggregation" will be considered for the analysis and compared to the average of the other entries listed.
+
+After that, feel free to run create_report.py in order to refresh the analysis with the newest data. (The last row in the sheet called "aggregation" will be considered.)
