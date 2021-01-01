@@ -1,7 +1,7 @@
 # Data-Analysis-FTL
 This repository provides the code used for a data analysis youtube project:
 
- video link
+ [![ANALYSING MY GAMEPLAY TO BECOME AN EXPERT IN FTL: FASTER THAN LIGHT](https://img.youtube.com/vi/ScUKvGIlN_Q/0.jpg)](https://www.youtube.com/watch?v=ScUKvGIlN_Q)
 
  An excel report is created in order to compare your in game performance against your previously collected experience in order to analyze your decisions.
 
